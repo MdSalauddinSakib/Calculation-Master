@@ -47,3 +47,17 @@ const calculateTriangleArea = () => {
     triangleAreaSpan.innerText = triangleArea;
 
 }
+
+// Calculate Circle Area
+
+const calculateCircleArea = () => {
+    const circleRadius = document.getElementById('circle-radius');
+    const circleRadiusText = circleRadius.value;
+    const radius = parseFloat(circleRadiusText);
+
+    const circleArea = Math.PI * radius * radius;
+    const circleAreaFixedNumber =  circleArea.toFixed(3)
+
+    const circleAreaSpan = document.getElementById('circle-area');
+    circleAreaSpan.innerText = circleAreaFixedNumber;
+}

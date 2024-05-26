@@ -29,6 +29,7 @@
                 <h3 id="result">Result: 0</h3>
             </div>
         </div> <br>
+        <!-- triangle area -->
         <div class="basic-calculator">
             <div class="calculator">
                 <h1 style="color: #587ef4;">Area of Triangle</h1>
@@ -49,6 +50,27 @@
             </div>
             <div class="result">
                 <h3>Triangle Area: <span id="triangle-area">0</span> cm<sup>2</sup></h3>
+            </div>
+        </div> <br>
+        <!-- Area of Circle -->
+        <div class="basic-calculator">
+            <div class="calculator">
+                <h1 style="color: #587ef4;">Area of Circle </h1>
+                <img src="images/circle.png" alt="">
+                <div class="card-body text-center">
+                    <h2>Circle</h2>
+                    <p>Aria (A) = π* r * r</p>
+                    <div>
+                        <input id="circle-radius" class="input-field" type="text" placeholder="radius">
+                        <span>cm</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn" onclick="calculateCircleArea()">Calculate </button>
+                    </div>
+                </div>
+            </div>
+            <div class="result">
+                <h3>Circle Area: <span id="circle-area">0</span> cm<sup>2</sup></h3>
             </div>
         </div>
     </div>
