@@ -1,25 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Calculator</title>
+    <title>Calculation Master</title>
     <link rel="stylesheet" href="./styles/style.css">
 </head>
+
 <body>
-    <div class="calculator">
-        <h1 style="color: #587ef4;">Basic Calculator</h1>
-        <input type="number" id="num1" placeholder="Enter 1st Number">
-        <input type="number" id="num2" placeholder="Enter 2nd Number">
-        <select name="" id="operation">
-            <option value="add">Addition</option>
-            <option value="subtraction">Subtraction</option>
-            <option value="multiplication">Multiplication</option>
-            <option value="division">Division</option>
-            <option value="remainder">Remainder</option>
-        </select>
-        <button class="btn" onclick="calculate()">Calculate</button>
-        <h3 id="result"></h3>
+    <div class="wrapper">
+        <div class="basic-calculator">
+            <div class="calculator">
+                <h1 style="color: #587ef4;">Basic Calculator</h1>
+                <input type="number" id="num1" placeholder="Enter 1st Number">
+                <input type="number" id="num2" placeholder="Enter 2nd Number">
+                <br>
+                <select id="operation">
+                    <option value="add">Addition</option>
+                    <option value="subtraction">Subtraction</option>
+                    <option value="multiplication">Multiplication</option>
+                    <option value="division">Division</option>
+                    <option value="remainder">Remainder</option>
+                </select> <br>
+                <button class="btn" onclick="calculate()">Calculate</button>
+            </div>
+            <div class="result">
+                <h3 id="result">Result: 0</h3>
+            </div>
+        </div> <br>
+        <div class="basic-calculator">
+            <div class="calculator">
+                <h1 style="color: #587ef4;">Area of Triangle</h1>
+                <img src="images/triangle.png" alt="">
+                <div class="card-body text-center">
+                    <h2>Triangle</h2>
+                    <p>Area (A) = 0.5 X b X h</p>
+                    <div>
+                        <input id="triangle-base" class="input-field" type="text"
+                            placeholder="b">
+                        <span>cm</span>
+                        <input type="text" class="input-field" placeholder="h" name=""
+                            id="triangle-height">
+                        <span>cm</span>
+                    </div>
+                    <div>
+                        <p>Area: <span id="triangle-area">0</span> cm<sup>2</sup></p>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn" onclick="calculateTriangleArea()">Calculate </button>
+                    </div>
+                </div>
+            </div>
+            <div class="result">
+                <h3>Area: <span id="triangle-area">0</span> cm<sup>2</sup></h3>
+            </div>
+        </div>
     </div>
+
+
+    <script src="script.js"></script>
 </body>
+
 </html>
