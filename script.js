@@ -30,3 +30,5 @@ function calculate () {
 
     document.getElementById('result').innerText = `Result: ${result}`;
 }
+
+// calculate triangle area
