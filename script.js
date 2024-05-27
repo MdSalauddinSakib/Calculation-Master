@@ -216,7 +216,7 @@ const calculateCubeArea = () => {
 }
 
 
-// ---------------------------------------------------------------
+// Scroll to top button
 let mybutton = document.getElementById("scrollToTopBtn");
 
 window.onscroll = function () { scrollFunction() };
