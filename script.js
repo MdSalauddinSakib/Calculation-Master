@@ -163,3 +163,17 @@ const calculateEllipseArea = () => {
     ellipseAreaSpan.innerText = ellipseAreaFixedNumber;
 
 }
+
+// Calculate Ellipse Area
+const calculateCubeArea = () => {
+    // a is the length of one side of the cube.
+    const cubeLengthInput = document.getElementById('cube-length');
+    const cubeLengthText = cubeLengthInput.value;
+    const length = parseFloat(cubeLengthText);
+
+    const cubeArea = 6 * length * length;
+
+    const cubeAreaSpan = document.getElementById('cube-area');
+    cubeAreaSpan.innerText = cubeArea;
+
+}
