@@ -31,6 +31,22 @@ function calculate() {
     document.getElementById('result').innerText = `Result: ${result}`;
 }
 
+// calculate rectangle area
+const calculateRectangleArea = () => {
+    const rectangleLengthInput = document.getElementById('rectangle-length');
+    const rectangleLengthText = rectangleLengthInput.value;
+    const length = parseFloat(rectangleLengthText);
+
+    const rectangleWidthValue = document.getElementById('rectangle-width');
+    const rectangleWidthText = rectangleWidthValue.value;
+    const width = parseFloat(rectangleWidthText);
+
+    const rectangleArea = length * width;
+
+    const rectangleAreaSpan = document.getElementById('rectangle-area');rectangleAreaSpan.innerText = rectangleArea;
+
+}
+
 // calculate triangle area
 const calculateTriangleArea = () => {
     const triangleBaseInput = document.getElementById('triangle-base');

@@ -29,6 +29,29 @@
                 <h3 id="result">Result: 0</h3>
             </div>
         </div> <br>
+        <!-- rectangle area -->
+        <div class="basic-calculator">
+            <div class="calculator">
+                <h1 style="color: #587ef4;">Area of Rectangle</h1>
+                <img src="images/rectangle.png" alt="">
+                <div class="card-body text-center">
+                    <h2>Rectangle</h2>
+                    <p>Area (A) = l * w</p>
+                    <div>
+                        <input id="rectangle-length" class="input-field" type="text" placeholder="length">
+                        <span>cm</span>
+                        <input id="rectangle-width" type="text" class="input-field" placeholder="width" name="">
+                        <span>cm</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn" onclick="calculateRectangleArea()">Calculate </button>
+                    </div>
+                </div>
+            </div>
+            <div class="result">
+                <h3>Rectangle Area: <span id="rectangle-area">0</span> cm<sup>2</sup></h3>
+            </div>
+        </div> <br>
         <!-- triangle area -->
         <div class="basic-calculator">
             <div class="calculator">
@@ -59,7 +82,7 @@
                 <img src="images/circle.png" alt="">
                 <div class="card-body text-center">
                     <h2>Circle</h2>
-                    <p>Aria (A) = π* r * r</p>
+                    <p>Area (A) = π * r * r</p>
                     <div>
                         <input id="circle-radius" class="input-field" type="text" placeholder="radius">
                         <span>cm</span>
