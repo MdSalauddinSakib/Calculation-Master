@@ -31,6 +31,19 @@ function calculate() {
     document.getElementById('result').innerText = `Result: ${result}`;
 }
 
+// Calculate Circle Area
+const calculateCircleArea = () => {
+    const circleRadius = document.getElementById('circle-radius');
+    const circleRadiusText = circleRadius.value;
+    const radius = parseFloat(circleRadiusText);
+
+    const circleArea = Math.PI * radius * radius;
+    const circleAreaFixedNumber =  circleArea.toFixed(3)
+
+    const circleAreaSpan = document.getElementById('circle-area');
+    circleAreaSpan.innerText = circleAreaFixedNumber;
+}
+
 // calculate rectangle area
 const calculateRectangleArea = () => {
     const rectangleLengthInput = document.getElementById('rectangle-length');
@@ -44,7 +57,19 @@ const calculateRectangleArea = () => {
     const rectangleArea = length * width;
 
     const rectangleAreaSpan = document.getElementById('rectangle-area');rectangleAreaSpan.innerText = rectangleArea;
+}
 
+// Calculate Square Area
+
+const calculateSquareArea = () => {
+    const squareArea = document.getElementById('square');
+    const squareAreaText = squareArea.value;
+    const area = parseFloat(squareAreaText);
+
+    const square = area * area;
+
+    const squareAreaSpan = document.getElementById('square-area');
+    squareAreaSpan.innerText = square;
 }
 
 // calculate triangle area
@@ -64,16 +89,38 @@ const calculateTriangleArea = () => {
 
 }
 
-// Calculate Circle Area
+// Calculate Parallelogram Area
+const calculateParallelogramArea = () => {
+    const parallelogramBaseInput = document.getElementById('parallelogram-base');
+    const parallelogramBaseText = parallelogramBaseInput.value;
+    const base = parseFloat(parallelogramBaseText);
 
-const calculateCircleArea = () => {
-    const circleRadius = document.getElementById('circle-radius');
-    const circleRadiusText = circleRadius.value;
-    const radius = parseFloat(circleRadiusText);
+    const parallelogramHeightValue = document.getElementById('parallelogram-height');
+    const parallelogramHeightText = parallelogramHeightValue.value;
+    const height = parseFloat(parallelogramHeightText);
 
-    const circleArea = Math.PI * radius * radius;
-    const circleAreaFixedNumber =  circleArea.toFixed(3)
+    const parallelogramArea = base * height;
 
-    const circleAreaSpan = document.getElementById('circle-area');
-    circleAreaSpan.innerText = circleAreaFixedNumber;
+    const parallelogramAreaSpan = document.getElementById('parallelogram-area');
+    parallelogramAreaSpan.innerText = parallelogramArea;
+
 }
+
+// Calculate Rhombus Area
+const calculateRhombusArea = () => {
+    const rhombusDiagonal1Input = document.getElementById('rhombus-diagonal1');
+    const rhombusDiagonal1Text = rhombusDiagonal1Input.value;
+    const diagonal1 = parseFloat(rhombusDiagonal1Text);
+
+    const rhombusDiagonal2Input = document.getElementById('rhombus-diagonal2');
+    const rhombusDiagonal2Text = rhombusDiagonal2Input.value;
+    const diagonal2 = parseFloat(rhombusDiagonal2Text);
+
+    const rhombusArea = 0.5 * diagonal1 * diagonal2;
+
+    const rhombusAreaSpan = document.getElementById('rhombus-area');
+    rhombusAreaSpan.innerText = rhombusArea;
+
+}
+
+// C
