@@ -31,6 +31,45 @@ function calculate() {
     document.getElementById('result').innerText = `Result: ${result}`;
 }
 
+// Calculate Temperature
+// const calculateTemperature = ()=>{
+//     const temperature = parseFloat(document.getElementById('temp').value);
+//     const operation = document.getElementById("tempOperation").value;
+//     let result;
+
+//     switch(operation){
+//         case 'celsius':
+//             result = 5/9 * (temperature - 32);
+//             break;
+//         case 'fahrenheit':
+//             result = ((9/5) * temperature) + 32;
+//             break;
+//         default:
+//             result = 'Invalid temperature';
+//     }
+//     document.getElementById('temperatureResult').innerText = `Temperature: ${result}`;
+// }
+// --------------------------------------------------------
+const calculateTemperature = () => {
+    const temperature = parseFloat(document.getElementById('temp').value);
+    const operation = document.getElementById("tempOperation").value;
+    let result;
+
+    switch(operation){
+        case 'celsius':
+            result = (5/9) * (temperature - 32);
+            document.getElementById('temperatureResult').innerText = `Temperature: ${result.toFixed(2)} °C`;
+            break;
+        case 'fahrenheit':
+            result = ((9/5) * temperature) + 32;
+            document.getElementById('temperatureResult').innerText = `Temperature: ${result.toFixed(2)} °F`;
+            break;
+        default:
+            document.getElementById('temperatureResult').innerText = 'Invalid temperature';
+    }
+}
+
+
 // Calculate Circle Area
 const calculateCircleArea = () => {
     const circleRadius = document.getElementById('circle-radius');
