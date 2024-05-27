@@ -123,4 +123,25 @@ const calculateRhombusArea = () => {
 
 }
 
-// C
+// Calculate Trapezoid  Area
+const calculateTrapezoidArea = () => {
+    const trapezoidBase1Input = document.getElementById('trapezoid-base1');
+    const trapezoidBase1Text = trapezoidBase1Input.value;
+    const base1 = parseFloat(trapezoidBase1Text);
+
+    const trapezoidBase2Input = document.getElementById('trapezoid-base2');
+    const trapezoidBase2Text = trapezoidBase2Input.value;
+    const base2 = parseFloat(trapezoidBase2Text);
+
+    const baseSum = base1 + base2;
+
+    const trapezoidHeightInput = document.getElementById('trapezoid-height');
+    const trapezoidHeightText = trapezoidHeightInput.value;
+    const height = parseFloat(trapezoidHeightText);
+
+    const trapezoidArea = 0.5 * baseSum * height;
+
+    const trapezoidAreaSpan = document.getElementById('trapezoid-area');
+    trapezoidAreaSpan.innerText = trapezoidArea;
+
+}
