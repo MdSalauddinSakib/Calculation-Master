@@ -55,13 +55,29 @@ const calculateTemperature = () => {
     const operation = document.getElementById("tempOperation").value;
     let result;
 
-    switch(operation){
-        case 'celsius':
-            result = (5/9) * (temperature - 32);
+    switch (operation) {
+        case 'F to C':
+            result = (5 / 9) * (temperature - 32);
             document.getElementById('temperatureResult').innerText = `Temperature: ${result.toFixed(2)} °C`;
             break;
-        case 'fahrenheit':
-            result = ((9/5) * temperature) + 32;
+        case 'C to F':
+            result = ((9 / 5) * temperature) + 32;
+            document.getElementById('temperatureResult').innerText = `Temperature: ${result.toFixed(2)} °F`;
+            break;
+        case 'C to K':
+            result = temperature + 273.15;
+            document.getElementById('temperatureResult').innerText = `Temperature: ${result.toFixed(2)} K`;
+            break;
+        case 'F to K':
+            result = (5 / 9) * (temperature - 32) + 273.15;
+            document.getElementById('temperatureResult').innerText = `Temperature: ${result.toFixed(2)} K`;
+            break;
+        case 'K to C':
+            result = temperature - 273.15;
+            document.getElementById('temperatureResult').innerText = `Temperature: ${result.toFixed(2)} °C`;
+            break;
+        case 'K to F':
+            result = (9 / 5) * (temperature - 273.15) + 32;
             document.getElementById('temperatureResult').innerText = `Temperature: ${result.toFixed(2)} °F`;
             break;
         default:
@@ -77,7 +93,7 @@ const calculateCircleArea = () => {
     const radius = parseFloat(circleRadiusText);
 
     const circleArea = Math.PI * radius * radius;
-    const circleAreaFixedNumber =  circleArea.toFixed(3)
+    const circleAreaFixedNumber = circleArea.toFixed(3)
 
     const circleAreaSpan = document.getElementById('circle-area');
     circleAreaSpan.innerText = circleAreaFixedNumber;
@@ -95,7 +111,7 @@ const calculateRectangleArea = () => {
 
     const rectangleArea = length * width;
 
-    const rectangleAreaSpan = document.getElementById('rectangle-area');rectangleAreaSpan.innerText = rectangleArea;
+    const rectangleAreaSpan = document.getElementById('rectangle-area'); rectangleAreaSpan.innerText = rectangleArea;
 }
 
 // Calculate Square Area
@@ -196,7 +212,7 @@ const calculateEllipseArea = () => {
     const shortestRadius = parseFloat(ellipseShortestRadiusText);
 
     const ellipseArea = Math.PI * longestRadius * shortestRadius;
-    const ellipseAreaFixedNumber =  ellipseArea.toFixed(3)
+    const ellipseAreaFixedNumber = ellipseArea.toFixed(3)
 
     const ellipseAreaSpan = document.getElementById('ellipse-area');
     ellipseAreaSpan.innerText = ellipseAreaFixedNumber;

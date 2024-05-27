@@ -1,296 +1,300 @@
 <!DOCTYPE html>
-< lang="en">
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Calculation Master</title>
-        <link rel="stylesheet" href="./styles/style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculation Master</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
 
-    <>
-        <div class="wrapper">
-            <div class="basic-calculator">
-                <div class="calculator">
-                    <h1 style="color: #587ef4;">Basic Calculator</h1>
-                    <input type="number" id="num1" placeholder="Enter 1st Number">
-                    <input type="number" id="num2" placeholder="Enter 2nd Number">
-                    <br>
-                    <select id="operation">
-                        <option value="add">Addition</option>
-                        <option value="subtraction">Subtraction</option>
-                        <option value="multiplication">Multiplication</option>
-                        <option value="division">Division</option>
-                        <option value="remainder">Remainder</option>
-                    </select> <br>
-                    <button class="btn" onclick="calculate()">Calculate</button>
+<body>
+    <div class="wrapper">
+        <div class="basic-calculator">
+            <div class="calculator">
+                <h1 style="color: #587ef4;">Basic Calculator</h1>
+                <input type="number" id="num1" placeholder="Enter 1st Number">
+                <input type="number" id="num2" placeholder="Enter 2nd Number">
+                <br>
+                <select id="operation">
+                    <option value="add">Addition</option>
+                    <option value="subtraction">Subtraction</option>
+                    <option value="multiplication">Multiplication</option>
+                    <option value="division">Division</option>
+                    <option value="remainder">Remainder</option>
+                </select> <br>
+                <button class="btn" onclick="calculate()">Calculate</button>
+            </div>
+            <div class="result">
+                <div class="result-of">
+                    <h3 style="color: blueviolet;" id="result">Result: 0</h3>
                 </div>
-                <div class="result">
-                    <div class="result-of">
-                        <h3 style="color: blueviolet;" id="result">Result: 0</h3>
-                    </div>
+            </div>
+        </div> <br>
+        <!-- Temperature Calculator -->
+        <div class="basic-calculator">
+            <div class="calculator">
+                <h1 style="color: #587ef4;">Temperature Converter</h1>
+                <input type="number" id="temp" placeholder="Enter temperature">
+                <br>
+                <select id="tempOperation">
+                    <option value="F to C">Fahrenheit to Celsius</option>
+                    <option value="C to F">Celsius to Fahrenheit</option>
+                    <option value="C to K">Celsius to Kelvin</option>
+                    <option value="F to K">Fahrenheit to Kelvin</option>
+                    <option value="K to C">Kelvin to Celsius</option>
+                    <option value="K to F">Kelvin to Fahrenheit</option>
+                </select> <br>
+                <button class="btn" onclick="calculateTemperature()">Convert</button>
+            </div>
+            <div class="result">
+                <div class="result-of">
+                    <h3 style="color: blueviolet;" id="temperatureResult">Temperature: 0</h3>
                 </div>
-            </div> <br>
-            <!-- Temperature Calculator -->
-            <div class="basic-calculator">
-                <div class="calculator">
-                    <h1 style="color: #587ef4;">Temperature Converter</h1>
-                    <input type="number" id="temp" placeholder="Enter temperature">
-                    <br>
-                    <select id="tempOperation">
-                        <option value="celsius">Fahrenheit to Celsius</option>
-                        <option value="fahrenheit">Celsius to Fahrenheit</option>
-                    </select> <br>
-                    <button class="btn" onclick="calculateTemperature()">Convert</button>
-                </div>
-                <div class="result">
-                    <div class="result-of">
-                        <h3 style="color: blueviolet;" id="temperatureResult">Temperature: </h3>
-                    </div>
-                </div>
-            </div> <br>
+            </div>
+        </div> <br>
 
-            <!-- Area of Circle -->
-            <div class="basic-calculator">
-                <div class="calculator">
-                    <h1 style="color: #587ef4;">Area of Circle </h1>
-                    <img src="images/circle.png" alt="">
+        <!-- Area of Circle -->
+        <div class="basic-calculator">
+            <div class="calculator">
+                <h1 style="color: #587ef4;">Area of Circle </h1>
+                <img src="images/circle.png" alt="">
+                <div>
+                    <h2>Circle</h2>
+                    <p>Area (A) = πr<sup>2</sup></p>
                     <div>
-                        <h2>Circle</h2>
-                        <p>Area (A) = πr<sup>2</sup></p>
-                        <div>
-                            <input id="circle-radius" class="input-field" type="text" placeholder="radius">
-                            <span>cm</span>
-                        </div>
-                        <div class="card-actions">
-                            <button class="btn" onclick="calculateCircleArea()">Calculate </button>
-                        </div>
+                        <input id="circle-radius" class="input-field" type="text" placeholder="radius">
+                        <span>cm</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn" onclick="calculateCircleArea()">Calculate </button>
                     </div>
                 </div>
-                <div class="result">
-                    <div class="result-of">
-                        <h3>Result of</h3>
-                        <h3 style="color: blueviolet;">Circle Area: <span id="circle-area">0</span> cm<sup>2</sup></h3>
-                    </div>
+            </div>
+            <div class="result">
+                <div class="result-of">
+                    <h3>Result of</h3>
+                    <h3 style="color: blueviolet;">Circle Area: <span id="circle-area">0</span> cm<sup>2</sup></h3>
                 </div>
-            </div> <br>
-            <!-- Area of Rectangle -->
-            <div class="basic-calculator">
-                <div class="calculator">
-                    <h1 style="color: #587ef4;">Area of Rectangle</h1>
-                    <img src="images/rectangle.png" alt="">
+            </div>
+        </div> <br>
+        <!-- Area of Rectangle -->
+        <div class="basic-calculator">
+            <div class="calculator">
+                <h1 style="color: #587ef4;">Area of Rectangle</h1>
+                <img src="images/rectangle.png" alt="">
+                <div>
+                    <h2>Rectangle</h2>
+                    <p>Area (A) = l * w</p>
                     <div>
-                        <h2>Rectangle</h2>
-                        <p>Area (A) = l * w</p>
-                        <div>
-                            <input id="rectangle-length" class="input-field" type="text" placeholder="length">
-                            <span>cm</span>
-                            <input id="rectangle-width" type="text" class="input-field" placeholder="width" name="">
-                            <span>cm</span>
-                        </div>
-                        <div class="card-actions">
-                            <button class="btn" onclick="calculateRectangleArea()">Calculate </button>
-                        </div>
+                        <input id="rectangle-length" class="input-field" type="text" placeholder="length">
+                        <span>cm</span>
+                        <input id="rectangle-width" type="text" class="input-field" placeholder="width" name="">
+                        <span>cm</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn" onclick="calculateRectangleArea()">Calculate </button>
                     </div>
                 </div>
-                <div class="result">
-                    <div class="result-of">
-                        <h3>Result of</h3>
-                        <h3 style="color: blueviolet;">Rectangle Area: <span id="rectangle-area">0</span> cm<sup>2</sup>
-                        </h3>
-                    </div>
+            </div>
+            <div class="result">
+                <div class="result-of">
+                    <h3>Result of</h3>
+                    <h3 style="color: blueviolet;">Rectangle Area: <span id="rectangle-area">0</span> cm<sup>2</sup>
+                    </h3>
                 </div>
-            </div> <br>
-            <!-- Area of Square -->
-            <div class="basic-calculator">
-                <div class="calculator">
-                    <h1 style="color: #587ef4;">Area of Square</h1>
-                    <img src="images/square.png" alt="">
+            </div>
+        </div> <br>
+        <!-- Area of Square -->
+        <div class="basic-calculator">
+            <div class="calculator">
+                <h1 style="color: #587ef4;">Area of Square</h1>
+                <img src="images/square.png" alt="">
+                <div>
+                    <h2>Square</h2>
+                    <p>Area (A) = a<sup>2</sup></p>
                     <div>
-                        <h2>Square</h2>
-                        <p>Area (A) = a<sup>2</sup></p>
-                        <div>
-                            <input id="square" class="input-field" type="text" placeholder="a">
-                            <span>cm</span>
-                        </div>
-                        <div class="card-actions">
-                            <button class="btn" onclick="calculateSquareArea()">Calculate </button>
-                        </div>
+                        <input id="square" class="input-field" type="text" placeholder="a">
+                        <span>cm</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn" onclick="calculateSquareArea()">Calculate </button>
                     </div>
                 </div>
-                <div class="result">
-                    <div class="result-of">
-                        <h3>Result of</h3>
-                        <h3 style="color: blueviolet;">Square Area: <span id="square-area">0</span> cm<sup>2</sup></h3>
-                    </div>
+            </div>
+            <div class="result">
+                <div class="result-of">
+                    <h3>Result of</h3>
+                    <h3 style="color: blueviolet;">Square Area: <span id="square-area">0</span> cm<sup>2</sup></h3>
                 </div>
-            </div> <br>
-            <!-- Area of Triangle -->
-            <div class="basic-calculator">
-                <div class="calculator">
-                    <h1 style="color: #587ef4;">Area of Triangle</h1>
-                    <img src="images/triangle.png" alt="">
+            </div>
+        </div> <br>
+        <!-- Area of Triangle -->
+        <div class="basic-calculator">
+            <div class="calculator">
+                <h1 style="color: #587ef4;">Area of Triangle</h1>
+                <img src="images/triangle.png" alt="">
+                <div>
+                    <h2>Triangle</h2>
+                    <p>Area (A) = 0.5 X b X h</p>
                     <div>
-                        <h2>Triangle</h2>
-                        <p>Area (A) = 0.5 X b X h</p>
-                        <div>
-                            <input id="triangle-base" class="input-field" type="text" placeholder="b">
-                            <span>cm</span>
-                            <input id="triangle-height" type="text" class="input-field" placeholder="h" name="">
-                            <span>cm</span>
-                        </div>
-                        <div class="card-actions">
-                            <button class="btn" onclick="calculateTriangleArea()">Calculate </button>
-                        </div>
+                        <input id="triangle-base" class="input-field" type="text" placeholder="b">
+                        <span>cm</span>
+                        <input id="triangle-height" type="text" class="input-field" placeholder="h" name="">
+                        <span>cm</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn" onclick="calculateTriangleArea()">Calculate </button>
                     </div>
                 </div>
-                <div class="result">
-                    <div class="result-of">
-                        <h3>Result of</h3>
-                        <h3 style="color: blueviolet;">Triangle Area: <span id="triangle-area">0</span> cm<sup>2</sup>
-                        </h3>
-                    </div>
+            </div>
+            <div class="result">
+                <div class="result-of">
+                    <h3>Result of</h3>
+                    <h3 style="color: blueviolet;">Triangle Area: <span id="triangle-area">0</span> cm<sup>2</sup>
+                    </h3>
                 </div>
-            </div> <br>
-            <!-- Area of Parallelogram -->
-            <div class="basic-calculator">
-                <div class="calculator">
-                    <h1 style="color: #587ef4;">Area of Parallelogram</h1>
-                    <img src="images/parallelogram.png" alt="">
+            </div>
+        </div> <br>
+        <!-- Area of Parallelogram -->
+        <div class="basic-calculator">
+            <div class="calculator">
+                <h1 style="color: #587ef4;">Area of Parallelogram</h1>
+                <img src="images/parallelogram.png" alt="">
+                <div>
+                    <h2>Parallelogram</h2>
+                    <p>Area (A) = b X h</p>
                     <div>
-                        <h2>Parallelogram</h2>
-                        <p>Area (A) = b X h</p>
-                        <div>
-                            <input id="parallelogram-base" class="input-field" type="text" placeholder="b">
-                            <span>cm</span>
-                            <input id="parallelogram-height" type="text" class="input-field" placeholder="h" name="">
-                            <span>cm</span>
-                        </div>
-                        <div class="card-actions">
-                            <button class="btn" onclick="calculateParallelogramArea()">Calculate </button>
-                        </div>
+                        <input id="parallelogram-base" class="input-field" type="text" placeholder="b">
+                        <span>cm</span>
+                        <input id="parallelogram-height" type="text" class="input-field" placeholder="h" name="">
+                        <span>cm</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn" onclick="calculateParallelogramArea()">Calculate </button>
                     </div>
                 </div>
-                <div class="result">
-                    <div class="result-of">
-                        <h3>Result of</h3>
-                        <h3 style="color: blueviolet;">Parallelogram Area: <span id="parallelogram-area">0</span>
-                            cm<sup>2</sup></h3>
-                    </div>
+            </div>
+            <div class="result">
+                <div class="result-of">
+                    <h3>Result of</h3>
+                    <h3 style="color: blueviolet;">Parallelogram Area: <span id="parallelogram-area">0</span>
+                        cm<sup>2</sup></h3>
                 </div>
-            </div><br>
-            <!-- Area of Rhombus -->
-            <div class="basic-calculator">
-                <div class="calculator">
-                    <h1 style="color: #587ef4;">Area of Rhombus</h1>
-                    <img src="images/Rhombus.png" alt="">
+            </div>
+        </div><br>
+        <!-- Area of Rhombus -->
+        <div class="basic-calculator">
+            <div class="calculator">
+                <h1 style="color: #587ef4;">Area of Rhombus</h1>
+                <img src="images/Rhombus.png" alt="">
+                <div>
+                    <h2>Rhombus</h2>
+                    <p>Area (A) = 1/2 * d1 * d2</p>
                     <div>
-                        <h2>Rhombus</h2>
-                        <p>Area (A) = 1/2 * d1 * d2</p>
-                        <div>
-                            <input id="rhombus-diagonal1" class="input-field" type="text" placeholder="d1">
-                            <span>cm</span>
-                            <input id="rhombus-diagonal2" type="text" class="input-field" placeholder="d2" name="">
-                            <span>cm</span>
-                        </div>
-                        <div class="card-actions">
-                            <button class="btn" onclick="calculateRhombusArea()">Calculate </button>
-                        </div>
+                        <input id="rhombus-diagonal1" class="input-field" type="text" placeholder="d1">
+                        <span>cm</span>
+                        <input id="rhombus-diagonal2" type="text" class="input-field" placeholder="d2" name="">
+                        <span>cm</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn" onclick="calculateRhombusArea()">Calculate </button>
                     </div>
                 </div>
-                <div class="result">
-                    <div class="result-of">
-                        <h3>Result of</h3>
-                        <h3 style="color: blueviolet;">Rhombus Area: <span id="rhombus-area">0</span>
-                            cm<sup>2</sup></h3>
-                    </div>
+            </div>
+            <div class="result">
+                <div class="result-of">
+                    <h3>Result of</h3>
+                    <h3 style="color: blueviolet;">Rhombus Area: <span id="rhombus-area">0</span>
+                        cm<sup>2</sup></h3>
                 </div>
-            </div><br>
-            <!-- Area of Trapezoid -->
-            <div class="basic-calculator">
-                <div class="calculator">
-                    <h1 style="color: #587ef4;">Area of Trapezoid</h1>
-                    <img src="images/trapezoid.png" alt="">
+            </div>
+        </div><br>
+        <!-- Area of Trapezoid -->
+        <div class="basic-calculator">
+            <div class="calculator">
+                <h1 style="color: #587ef4;">Area of Trapezoid</h1>
+                <img src="images/trapezoid.png" alt="">
+                <div>
+                    <h2>Trapezoid</h2>
+                    <p>Area (A) = 1/2*(a+b)*h</p>
                     <div>
-                        <h2>Trapezoid</h2>
-                        <p>Area (A) = 1/2*(a+b)*h</p>
-                        <div>
-                            <input id="trapezoid-base1" class="input-field" type="text" placeholder="a">
-                            <span>cm</span>
-                            <input id="trapezoid-base2" type="text" class="input-field" placeholder="b" name="">
-                            <span>cm</span>
-                            <input id="trapezoid-height" type="text" class="input-field" placeholder="h" name="">
-                            <span>cm</span>
-                        </div>
-                        <div class="card-actions">
-                            <button class="btn" onclick="calculateTrapezoidArea()">Calculate </button>
-                        </div>
+                        <input id="trapezoid-base1" class="input-field" type="text" placeholder="a">
+                        <span>cm</span>
+                        <input id="trapezoid-base2" type="text" class="input-field" placeholder="b" name="">
+                        <span>cm</span>
+                        <input id="trapezoid-height" type="text" class="input-field" placeholder="h" name="">
+                        <span>cm</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn" onclick="calculateTrapezoidArea()">Calculate </button>
                     </div>
                 </div>
-                <div class="result">
-                    <div class="result-of">
-                        <h3>Result of</h3>
-                        <h3 style="color: blueviolet;">Trapezoid Area: <span id="trapezoid-area">0</span>
-                            cm<sup>2</sup></h3>
-                    </div>
+            </div>
+            <div class="result">
+                <div class="result-of">
+                    <h3>Result of</h3>
+                    <h3 style="color: blueviolet;">Trapezoid Area: <span id="trapezoid-area">0</span>
+                        cm<sup>2</sup></h3>
                 </div>
-            </div><br>
-            <!-- Area of Ellipse -->
-            <div class="basic-calculator">
-                <div class="calculator">
-                    <h1 style="color: #587ef4;">Area of Ellipse</h1>
-                    <img src="images/ellipse.png" alt="">
+            </div>
+        </div><br>
+        <!-- Area of Ellipse -->
+        <div class="basic-calculator">
+            <div class="calculator">
+                <h1 style="color: #587ef4;">Area of Ellipse</h1>
+                <img src="images/ellipse.png" alt="">
+                <div>
+                    <h2>Ellipse </h2>
+                    <p>Area (A) = π*a*b</p>
                     <div>
-                        <h2>Ellipse </h2>
-                        <p>Area (A) = π*a*b</p>
-                        <div>
-                            <input id="longest-radius" class="input-field" type="text" placeholder="a">
-                            <span>cm</span>
-                            <input id="shortest-radius" type="text" class="input-field" placeholder="b" name="">
-                            <span>cm</span>
-                        </div>
-                        <div class="card-actions">
-                            <button class="btn" onclick="calculateEllipseArea()">Calculate </button>
-                        </div>
+                        <input id="longest-radius" class="input-field" type="text" placeholder="a">
+                        <span>cm</span>
+                        <input id="shortest-radius" type="text" class="input-field" placeholder="b" name="">
+                        <span>cm</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn" onclick="calculateEllipseArea()">Calculate </button>
                     </div>
                 </div>
-                <div class="result">
-                    <div class="result-of">
-                        <h3>Result of</h3>
-                        <h3 style="color: blueviolet;">Ellipse Area: <span id="ellipse-area">0</span>
-                            cm<sup>2</sup></h3>
-                    </div>
+            </div>
+            <div class="result">
+                <div class="result-of">
+                    <h3>Result of</h3>
+                    <h3 style="color: blueviolet;">Ellipse Area: <span id="ellipse-area">0</span>
+                        cm<sup>2</sup></h3>
                 </div>
-            </div><br>
-            <!-- Area of Cube  -->
-            <div class="basic-calculator">
-                <div class="calculator">
-                    <h1 style="color: #587ef4;">Area of Cube</h1>
-                    <img src="images/cube.jpg" alt="">
+            </div>
+        </div><br>
+        <!-- Area of Cube  -->
+        <div class="basic-calculator">
+            <div class="calculator">
+                <h1 style="color: #587ef4;">Area of Cube</h1>
+                <img src="images/cube.jpg" alt="">
+                <div>
+                    <h2>Cube </h2>
+                    <p>Area (A) = 6a<sup>2</sup></p>
                     <div>
-                        <h2>Cube </h2>
-                        <p>Area (A) = 6a<sup>2</sup></p>
-                        <div>
-                            <input id="cube-length" class="input-field" type="text" placeholder="a">
-                            <span>cm</span>
-                        </div>
-                        <div class="card-actions">
-                            <button class="btn" onclick="calculateCubeArea()">Calculate </button>
-                        </div>
+                        <input id="cube-length" class="input-field" type="text" placeholder="a">
+                        <span>cm</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn" onclick="calculateCubeArea()">Calculate </button>
                     </div>
                 </div>
-                <div class="result">
-                    <div class="result-of">
-                        <h3>Result of</h3>
-                        <h3 style="color: blueviolet;">Cube Area: <span id="cube-area">0</span>
-                            cm<sup>2</sup></h3>
-                    </div>
+            </div>
+            <div class="result">
+                <div class="result-of">
+                    <h3>Result of</h3>
+                    <h3 style="color: blueviolet;">Cube Area: <span id="cube-area">0</span>
+                        cm<sup>2</sup></h3>
                 </div>
-            </div><br>
-        </div>
+            </div>
+        </div><br>
+    </div>
 
 
-        <script src="script.js"></script>
-        </body>
+    <script src="script.js"></script>
+</body>
 
-        </html>
+</html>
