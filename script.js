@@ -145,3 +145,21 @@ const calculateTrapezoidArea = () => {
     trapezoidAreaSpan.innerText = trapezoidArea;
 
 }
+
+// Calculate Ellipse Area
+const calculateEllipseArea = () => {
+    const ellipseLongestRadiusInput = document.getElementById('longest-radius');
+    const ellipseLongestRadiusText = ellipseLongestRadiusInput.value;
+    const longestRadius = parseFloat(ellipseLongestRadiusText);
+
+    const ellipseShortestRadiusInput = document.getElementById('shortest-radius');
+    const ellipseShortestRadiusText = ellipseShortestRadiusInput.value;
+    const shortestRadius = parseFloat(ellipseShortestRadiusText);
+
+    const ellipseArea = Math.PI * longestRadius * shortestRadius;
+    const ellipseAreaFixedNumber =  ellipseArea.toFixed(3)
+
+    const ellipseAreaSpan = document.getElementById('ellipse-area');
+    ellipseAreaSpan.innerText = ellipseAreaFixedNumber;
+
+}
