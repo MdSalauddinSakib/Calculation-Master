@@ -48,6 +48,7 @@
                 </div>
             </div>
         </div> <br>
+
         <!-- Temperature Calculator -->
         <div class="basic-calculator" id="temperature">
             <div class="calculator">
@@ -55,12 +56,12 @@
                 <input type="number" id="temp" placeholder="Enter temperature">
                 <br>
                 <select id="tempOperation">
-                    <option value="F to C">Fahrenheit to Celsius</option>
-                    <option value="C to F">Celsius to Fahrenheit</option>
-                    <option value="C to K">Celsius to Kelvin</option>
-                    <option value="F to K">Fahrenheit to Kelvin</option>
-                    <option value="K to C">Kelvin to Celsius</option>
-                    <option value="K to F">Kelvin to Fahrenheit</option>
+                    <option value="FtoC">Fahrenheit to Celsius</option>
+                    <option value="CtoF">Celsius to Fahrenheit</option>
+                    <option value="CtoK">Celsius to Kelvin</option>
+                    <option value="FtoK">Fahrenheit to Kelvin</option>
+                    <option value="KtoC">Kelvin to Celsius</option>
+                    <option value="KtoF">Kelvin to Fahrenheit</option>
                 </select> <br>
                 <button class="btn" onclick="calculateTemperature()">Convert</button>
             </div>
@@ -83,7 +84,7 @@
                         <input id="circle-radius" class="input-field" type="text" placeholder="radius">
                         <span>cm</span>
                     </div>
-                    <div class="card-actions">
+                    <div>
                         <button class="btn" onclick="calculateCircleArea()">Calculate </button>
                     </div>
                 </div>
@@ -110,7 +111,7 @@
                         <input id="rectangle-width" type="text" class="input-field" placeholder="width" name="">
                         <span>cm</span>
                     </div>
-                    <div class="card-actions">
+                    <div>
                         <button class="btn" onclick="calculateRectangleArea()">Calculate </button>
                     </div>
                 </div>
@@ -128,15 +129,15 @@
         <div class="basic-calculator" id="square">
             <div class="calculator">
                 <h1 style="color: #587ef4;">Area of Square</h1>
-                <img src="images/square.png" alt="">
+                <img src="images/square.png" alt="square">
                 <div>
                     <h2>Square</h2>
                     <p>Area (A) = a<sup>2</sup></p>
                     <div>
-                        <input id="square" class="input-field" type="text" placeholder="a">
+                        <input id="square-side-length" class="input-field" type="text" placeholder="a">
                         <span>cm</span>
                     </div>
-                    <div class="card-actions">
+                    <div>
                         <button class="btn" onclick="calculateSquareArea()">Calculate </button>
                     </div>
                 </div>
@@ -163,7 +164,7 @@
                         <input id="triangle-height" type="text" class="input-field" placeholder="h" name="">
                         <span>cm</span>
                     </div>
-                    <div class="card-actions">
+                    <div>
                         <button class="btn" onclick="calculateTriangleArea()">Calculate </button>
                     </div>
                 </div>
@@ -191,7 +192,7 @@
                         <input id="parallelogram-height" type="text" class="input-field" placeholder="h" name="">
                         <span>cm</span>
                     </div>
-                    <div class="card-actions">
+                    <div>
                         <button class="btn" onclick="calculateParallelogramArea()">Calculate </button>
                     </div>
                 </div>
@@ -219,7 +220,7 @@
                         <input id="rhombus-diagonal2" type="text" class="input-field" placeholder="d2" name="">
                         <span>cm</span>
                     </div>
-                    <div class="card-actions">
+                    <div>
                         <button class="btn" onclick="calculateRhombusArea()">Calculate </button>
                     </div>
                 </div>
@@ -249,7 +250,7 @@
                         <input id="trapezoid-height" type="text" class="input-field" placeholder="h" name="">
                         <span>cm</span>
                     </div>
-                    <div class="card-actions">
+                    <div>
                         <button class="btn" onclick="calculateTrapezoidArea()">Calculate </button>
                     </div>
                 </div>
@@ -277,7 +278,7 @@
                         <input id="shortest-radius" type="text" class="input-field" placeholder="b" name="">
                         <span>cm</span>
                     </div>
-                    <div class="card-actions">
+                    <div>
                         <button class="btn" onclick="calculateEllipseArea()">Calculate </button>
                     </div>
                 </div>
@@ -303,7 +304,7 @@
                         <input id="cube-length" class="input-field" type="text" placeholder="a">
                         <span>cm</span>
                     </div>
-                    <div class="card-actions">
+                    <div>
                         <button class="btn" onclick="calculateCubeArea()">Calculate </button>
                     </div>
                 </div>

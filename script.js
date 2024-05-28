@@ -38,27 +38,27 @@ const calculateTemperature = () => {
     let result;
 
     switch (operation) {
-        case 'F to C':
+        case 'FtoC':
             result = (5 / 9) * (temperature - 32);
             document.getElementById('temperatureResult').innerText = `Temperature: ${result.toFixed(2)} °C`;
             break;
-        case 'C to F':
+        case 'CtoF':
             result = ((9 / 5) * temperature) + 32;
             document.getElementById('temperatureResult').innerText = `Temperature: ${result.toFixed(2)} °F`;
             break;
-        case 'C to K':
+        case 'CtoK':
             result = temperature + 273.15;
             document.getElementById('temperatureResult').innerText = `Temperature: ${result.toFixed(2)} K`;
             break;
-        case 'F to K':
+        case 'FtoK':
             result = (5 / 9) * (temperature - 32) + 273.15;
             document.getElementById('temperatureResult').innerText = `Temperature: ${result.toFixed(2)} K`;
             break;
-        case 'K to C':
+        case 'KtoC':
             result = temperature - 273.15;
             document.getElementById('temperatureResult').innerText = `Temperature: ${result.toFixed(2)} °C`;
             break;
-        case 'K to F':
+        case 'KtoF':
             result = (9 / 5) * (temperature - 273.15) + 32;
             document.getElementById('temperatureResult').innerText = `Temperature: ${result.toFixed(2)} °F`;
             break;
@@ -97,10 +97,9 @@ const calculateRectangleArea = () => {
 }
 
 // Calculate Square Area
-
 const calculateSquareArea = () => {
-    const squareArea = document.getElementById('square');
-    const squareAreaText = squareArea.value;
+    const squareSideArea = document.getElementById('square-side-length');
+    const squareAreaText = squareSideArea.value;
     const area = parseFloat(squareAreaText);
 
     const square = area * area;
@@ -108,6 +107,8 @@ const calculateSquareArea = () => {
     const squareAreaSpan = document.getElementById('square-area');
     squareAreaSpan.innerText = square;
 }
+
+
 
 // calculate triangle area
 const calculateTriangleArea = () => {
